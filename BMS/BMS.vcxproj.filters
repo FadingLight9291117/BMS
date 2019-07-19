@@ -93,6 +93,18 @@
     <ClInclude Include="RequestSaveTest.h">
       <Filter>test</Filter>
     </ClInclude>
+    <ClInclude Include="QueryCardController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="WithdrawController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangePasswordController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="TransController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RemoveDAOTest.cpp">

@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ChangePasswordController.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="CreditCard.h" />
     <ClInclude Include="DepositCard.h" />
@@ -138,6 +139,7 @@
     <ClInclude Include="LoginControllerTest.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="MysqlConnector.h" />
+    <ClInclude Include="QueryCardController.h" />
     <ClInclude Include="QueryDAO.h" />
     <ClInclude Include="RemoveDAO.h" />
     <ClInclude Include="InsertDAOTest.h" />
@@ -147,8 +149,10 @@
     <ClInclude Include="Response.h" />
     <ClInclude Include="SaveController.h" />
     <ClInclude Include="SaveControllerTest.h" />
+    <ClInclude Include="TransController.h" />
     <ClInclude Include="UpdateDAO.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="WithdrawController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="QueryControllerTest.cpp" />

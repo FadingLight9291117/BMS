@@ -43,7 +43,6 @@ public:
 		{
 			string cardNumber = (*m)["cardNumber"];//卡号
 			string money = (*m)["money"];
-
 			//--………………………………调用控制器，获取数据
 			SaveController controller;
 			(*mm)["check"] = to_string(controller.actionRequests(stoll(cardNumber), stoi(money)));

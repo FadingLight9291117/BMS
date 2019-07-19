@@ -1,8 +1,9 @@
 #include<iostream>
-#include"RequestSaveTest.h"
+#include"TransController.h"
 using namespace std;
+
 int main()
 {
-	RequestSaveTest test;
-	cout << test.run("1000000000000021","100") << endl;
+	TransController controller;
+	cout << controller.actionRequests(1000000000000023, 1000000000000021, 1000) << endl;
 }
