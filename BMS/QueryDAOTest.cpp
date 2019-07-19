@@ -1,3 +1,7 @@
+///*@author 车亮召					*/
+///*******************************/
+///*      QueryDAO测试函数      */
+///*****************************/
 //#include<iostream>
 //#include<string>
 //#include<stdlib.h>
@@ -14,9 +18,13 @@
 //	query.query(&user);
 //	cout << user.getName() << endl;*/
 //
-//
+//	CreditCard* cc;
+//	DepositCard* dc;
 //	
-//	map<string,string> *m = query.operate(1000000000000007, "card");
+//	cc = query.query1(1000000000000007);
 //
-//	cout << (*m)["balance"] << endl;
+//	dc = query.query2(1000000000000042);
+//
+//	cout << (*cc).getBalance() << endl;
+//	cout << (*dc).getBalance() << endl;
 //}

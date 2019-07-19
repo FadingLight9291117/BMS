@@ -9,23 +9,9 @@
 //using namespace std;
 //int main()
 //{
-//	User user;
-//	user.setId_card(440606195006019198);
-//
-//	CreditCard creditcard;
-//	creditcard.setCardnum(1000000000000027);
-//
-//	DepositCard depositcard;
-//	depositcard.setCardnum(1000000000000044);
-//
 //	RemoveDAO dao;
-//
-//	/*int m = dao.remove(&user);
-//	cout << m << endl;*/
-//
-//	/*int n = dao.remove(&creditcard);
-//	cout << n << endl;*/
-//
-//	int k = dao.remove(&depositcard);
+//	/*int m = dao.removeUser(430903195002288193);*/
+//	/*int n = dao.removeCredit(1000000000000025);*/
+//	int k = dao.removeDeposit(1000000000000042);
 //	cout << k << endl;
 //}

@@ -18,6 +18,8 @@ using namespace std;
 
 class InsertDAO 
 {
+private:
+	MYSQL* mysql;
 public:
 	int insert(User* user);									// 插入到user表，参数自定,返回值0或1
 	int insert(CreditCard* card);							// 插入到credit_card
@@ -26,7 +28,7 @@ public:
 
 int InsertDAO::insert(User *user)
 {
-	MYSQL *mysql = MysqlConnector::getConnector();					// 连接数据库
+	mysql = MysqlConnector::getConnector();					// 连接数据库
 	string name = user->getName();
 	long long id_card = user->getId_card();    
 
@@ -53,7 +55,7 @@ int InsertDAO::insert(User *user)
 
 int InsertDAO::insert(CreditCard *card)
 {
-	MYSQL *mysql = MysqlConnector::getConnector();						// 连接数据库
+	mysql = MysqlConnector::getConnector();						// 连接数据库
 
 	char insertsql[1024];
 	int len = -1;
@@ -79,7 +81,7 @@ int InsertDAO::insert(CreditCard *card)
 
 int InsertDAO::insert(DepositCard* card)
 {
-	MYSQL* mysql = MysqlConnector::getConnector();						// 连接数据库
+	mysql = MysqlConnector::getConnector();						// 连接数据库
 
 	char insertsql[1024];
 	int len = -1;
