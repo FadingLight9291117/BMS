@@ -28,6 +28,9 @@
     <Filter Include="controller">
       <UniqueIdentifier>{c92030fa-c4c2-4ce7-a142-d41d66932ffb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="rar">
+      <UniqueIdentifier>{f66de9f4-def1-4ec0-b198-6e87ac302104}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CreditCard.h">
@@ -60,11 +63,38 @@
     <ClInclude Include="UpdateDAO.h">
       <Filter>dao</Filter>
     </ClInclude>
+    <ClInclude Include="LoginController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginControllerTest.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertDAOTest.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveControllerTest.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="Request.h">
+      <Filter>rar</Filter>
+    </ClInclude>
+    <ClInclude Include="Response.h">
+      <Filter>rar</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestLoginTest.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestSaveTest.h">
+      <Filter>test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InsertDAOTest.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="RemoveDAOTest.cpp">
       <Filter>test</Filter>
     </ClCompile>
@@ -75,6 +105,9 @@
       <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="UpdateDAOTest.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>

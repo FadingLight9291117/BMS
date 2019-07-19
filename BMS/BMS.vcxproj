@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -129,22 +129,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="CreditCard.h" />
     <ClInclude Include="DepositCard.h" />
     <ClInclude Include="Factory.h" />
     <ClInclude Include="InsertDAO.h" />
+    <ClInclude Include="LoginController.h" />
+    <ClInclude Include="LoginControllerTest.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="MysqlConnector.h" />
     <ClInclude Include="QueryDAO.h" />
     <ClInclude Include="RemoveDAO.h" />
+    <ClInclude Include="InsertDAOTest.h" />
+    <ClInclude Include="Request.h" />
+    <ClInclude Include="RequestLoginTest.h" />
+    <ClInclude Include="RequestSaveTest.h" />
+    <ClInclude Include="Response.h" />
+    <ClInclude Include="SaveController.h" />
+    <ClInclude Include="SaveControllerTest.h" />
     <ClInclude Include="UpdateDAO.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InsertDAOTest.cpp" />
     <ClCompile Include="QueryControllerTest.cpp" />
     <ClCompile Include="QueryDAOTest.cpp" />
     <ClCompile Include="RemoveDAOTest.cpp" />
+    <ClCompile Include="test.cpp" />
     <ClCompile Include="UpdateDAOTest.cpp" />
   </ItemGroup>
   <ItemGroup>

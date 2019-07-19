@@ -32,23 +32,24 @@ int UpdateDAO::update(long long cardNum,int change,int io)
 	mysql = MysqlConnector::getConnector();			// 连接数据库
 	char updatesql[1024];
 
-	if(io==1)
-		sprintf_s(updatesql, 256, "UPDATE credit_card SET balance=balance+%d WHERE card_number=%lld;",change,cardNum);
-	else
-		sprintf_s(updatesql, 256, "UPDATE credit_card SET balance=balance-%d WHERE card_number=%lld;",change,cardNum);
-
-	if(mysql_query(mysql, updatesql)!=0)		//mysql_query()执行sql语句
+	if (cardNum % 2 == 1)
 	{
-		if(io==1)
-			sprintf_s(updatesql, 256, "UPDATE deposit_card SET balance=balance+%d WHERE card_number=%lld;",change,cardNum);
+		if (io == 1)
+			sprintf_s(updatesql, 256, "UPDATE credit_card SET balance=balance+%d WHERE card_number=%lld;", change, cardNum);
 		else
-			sprintf_s(updatesql, 256, "UPDATE deposit_card SET balance=balance-%d WHERE card_number=%lld;",change,cardNum);
+			sprintf_s(updatesql, 256, "UPDATE credit_card SET balance=balance-%d WHERE card_number=%lld;", change, cardNum);
+		int len = mysql_query(mysql, updatesql);	//mysql_query()执行sql语句
 
-		if(mysql_query(mysql, updatesql)!=0)
-		{
-			MysqlConnector::close();
-			return 0;
-		}
+	}
+
+	else
+	{
+		if (io == 1)
+			sprintf_s(updatesql, 256, "UPDATE deposit_card SET balance=balance+%d WHERE card_number=%lld;", change, cardNum);
+		else
+			sprintf_s(updatesql, 256, "UPDATE deposit_card SET balance=balance-%d WHERE card_number=%lld;", change, cardNum);
+
+		mysql_query(mysql, updatesql);
 	}
 
 	MysqlConnector::close();		//关闭连接

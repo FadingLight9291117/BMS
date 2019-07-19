@@ -1,13 +1,12 @@
-#ifndef _INC_SAVE_CONTROLLER
-#define _INC_SAVE_CONTROLLER
+
+#ifndef _INC_SAVECONTROLLER_
+#define _INC_SAVECONTROLLER_
 
 
 #include<iostream>
+#include"Factory.h"
 using namespace std;
 
-class DAOFactory;											// 工厂类，创建DAO，DAO是操作数据库的一个类
-class VO;													// VO，Value Object，用来传递值的对象
-class DAO;													// DAO,Data Access Object 是操作数据库的对象
 
 class SaveController
 {
@@ -19,10 +18,19 @@ public:
 
 int SaveController::actionRequests(long long cardNumber,int amount)
 {	
-	DAO *update = factory.createUpdateDAO();       // 创建一个更新DAO
-	update.update(cardNumber,amount);
-		return 1;
+	UpdateDAO* update = factory.createUpdateDAO();       // 创建一个更新DAO
+	if(cardNumber % 2 == 1 )
+	{
+		return update->update(cardNumber,amount,1);
+		
+	}
+	if(cardNumber % 2 == 0 )
+	{
+		return update->update(cardNumber,amount,1);
+		
+
+	}
 
 }
 
-#endif // !_INC_SAVE_CONTROLLER
+#endif // !_INC_SAVECONTROLLER_

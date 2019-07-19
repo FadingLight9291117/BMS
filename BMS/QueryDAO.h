@@ -38,6 +38,8 @@ CreditCard* QueryDAO::queryCredit(long long cardNum)
 	{
 		return NULL;
 	}
+
+
 	MYSQL_RES *res;             //返回行的查询结果集
 	MYSQL_FIELD *fd;            //字段列数组
 	MYSQL_ROW column;
@@ -45,6 +47,11 @@ CreditCard* QueryDAO::queryCredit(long long cardNum)
 
 	res=mysql_store_result(mysql);		//获得sql语句结束后返回的结果集
 	column = mysql_fetch_row(res);
+
+	if (mysql_num_rows(res) == 0)
+	{
+		return NULL;
+	}
 
 	cc->setUserIDCard(atoi(column[1]));
 
@@ -80,6 +87,11 @@ DepositCard* QueryDAO::queryDeposit(long long cardNum)
 	res=mysql_store_result(mysql);		//获得sql语句结束后返回的结果集
 	column = mysql_fetch_row(res);
 
+	if (mysql_num_rows(res) == 0)
+	{
+		return NULL;
+	}
+
 	dc->setUserIDCard(atoi(column[1]));
 
 	dc->setPassword(atoi(column[3]));
@@ -111,6 +123,11 @@ User* QueryDAO::queryUser(long long IDCard)
 
 	res=mysql_store_result(mysql);		//获得sql语句结束后返回的结果集
 	column = mysql_fetch_row(res);
+
+	if (mysql_num_rows(res) == 0)
+	{
+		return NULL;
+	}
 
 	usr->setName(column[1]);
 	usr->setId_card(IDCard);

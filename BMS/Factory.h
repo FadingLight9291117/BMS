@@ -23,9 +23,9 @@ InsertDAO* DAOFactory::createInsertDAO()
 	return new InsertDAO();
 }
 
-InsertDAO* DAOFactory::createInsertDAO()
+RemoveDAO* DAOFactory::createRemoveDAO()
 {
-	return new InsertDAO();
+	return new RemoveDAO();
 }
 
 UpdateDAO* DAOFactory::createUpdateDAO()
