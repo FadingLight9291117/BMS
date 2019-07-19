@@ -97,6 +97,7 @@ User* QueryDAO::queryUser(long long IDCard)
 	MYSQL *mysql = MysqlConnector::getConnector();			// 连接数据库
 	char querysql[1024];
 
+	User* usr = new Uesr()
 	sprintf_s(querysql, 256, "SELECT * FROM user WHERE id_card = %lld;", IDCard);
 
 	if(mysql_query(mysql, querysql)!=0)		//mysql_query()执行sql语句
@@ -112,6 +113,7 @@ User* QueryDAO::queryUser(long long IDCard)
 	column = mysql_fetch_row(res);
 
 	usr->setName(column[1]);
+	usr->setId_card(IDCard);
 
 	MysqlConnector::close();		//关闭连接
 	return usr;
