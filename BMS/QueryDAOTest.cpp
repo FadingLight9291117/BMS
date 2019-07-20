@@ -21,10 +21,10 @@
 //	CreditCard* cc;
 //	DepositCard* dc;
 //	
-//	cc = query.query1(1000000000000007);
+//	cc = query.queryCredit(1000000000000007);
 //
-//	dc = query.query2(1000000000000042);
+//	dc = query.queryDeposit(1000000000000042);
 //
-//	cout << (*cc).getBalance() << endl;
-//	cout << (*dc).getBalance() << endl;
+//	cout << (*cc).getState() << endl;
+//	cout << (*dc).getState() << endl;
 //}

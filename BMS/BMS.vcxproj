@@ -88,7 +88,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -137,8 +137,11 @@
     <ClInclude Include="InsertDAO.h" />
     <ClInclude Include="LoginController.h" />
     <ClInclude Include="LoginControllerTest.h" />
+    <ClInclude Include="LossReportingController.h" />
+    <ClInclude Include="Message.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="MysqlConnector.h" />
+    <ClInclude Include="OpenController.h" />
     <ClInclude Include="QueryCardController.h" />
     <ClInclude Include="QueryDAO.h" />
     <ClInclude Include="RemoveDAO.h" />
@@ -146,7 +149,7 @@
     <ClInclude Include="Request.h" />
     <ClInclude Include="RequestLoginTest.h" />
     <ClInclude Include="RequestSaveTest.h" />
-    <ClInclude Include="Response.h" />
+    <ClInclude Include="Server.h" />
     <ClInclude Include="SaveController.h" />
     <ClInclude Include="SaveControllerTest.h" />
     <ClInclude Include="TransController.h" />
@@ -158,8 +161,9 @@
     <ClCompile Include="QueryControllerTest.cpp" />
     <ClCompile Include="QueryDAOTest.cpp" />
     <ClCompile Include="RemoveDAOTest.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="LossReportingControllerTest.cpp" />
     <ClCompile Include="UpdateDAOTest.cpp" />
+    <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="reference.md" />

@@ -1,3 +1,6 @@
+#ifndef _INC_MESSAGE_
+#define _INC_MESSAGE_
+
 #include<iostream>
 #include<map>
 #include<string>
@@ -60,26 +63,10 @@ map<string, string> Message::parse(string str)
 	{
 		temp = *iter;
 		int i = temp.find('=');
-		mm[temp.substr(0, i)] = temp.substr(i+1);
+		mm[temp.substr(0, i)] = temp.substr(i + 1);
 	}
 	return mm;
 }
 
-//int main()
-//{
-//	string s = "name=LoginController idCard=131231321231231231231 password=123456";
-//	map<string,string> m = Message::parse(s);
-//	map<string, string>::iterator iter = m.begin();
-//
-//
-//	string ss = Message::serialize(m);
-//	cout << ss << endl;
-//	map<string, string> mm = Message::parse(ss);
-//
-//	map<string, string>::iterator iter1 = mm.begin();
-//	while (iter1 != mm.end())
-//	{
-//		cout << iter1->first << ":" << iter1->second << endl;
-//		++iter1;
-//	}
-//}
+
+#endif // !_INC_MESSAGE_

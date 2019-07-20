@@ -28,7 +28,7 @@
     <Filter Include="controller">
       <UniqueIdentifier>{c92030fa-c4c2-4ce7-a142-d41d66932ffb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="rar">
+    <Filter Include="net">
       <UniqueIdentifier>{f66de9f4-def1-4ec0-b198-6e87ac302104}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -79,10 +79,7 @@
       <Filter>test</Filter>
     </ClInclude>
     <ClInclude Include="Request.h">
-      <Filter>rar</Filter>
-    </ClInclude>
-    <ClInclude Include="Response.h">
-      <Filter>rar</Filter>
+      <Filter>net</Filter>
     </ClInclude>
     <ClInclude Include="Controller.h">
       <Filter>controller</Filter>
@@ -105,6 +102,18 @@
     <ClInclude Include="TransController.h">
       <Filter>controller</Filter>
     </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="LossReportingController.h">
+      <Filter>controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RemoveDAOTest.cpp">
@@ -119,7 +128,10 @@
     <ClCompile Include="UpdateDAOTest.cpp">
       <Filter>test</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="源.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LossReportingControllerTest.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,11 +1,12 @@
-#ifndef _INC_RESPONSE_
-#define _INC_RESPONSE_
+#ifndef _INC_SERVER_
+#define _INC_SERVER_
 
 #include<iostream>
 #include<string>
 #include<map>
 #include"Controller.h"
 #include<sstream>
+#include "Message.h"
 using namespace std;
 
 class Response
@@ -61,6 +62,7 @@ public:
 		}
 		return mm;
 	}
+
 };
 
-#endif // !_INC_RESPONSE_
+#endif // 

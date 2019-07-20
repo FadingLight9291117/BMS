@@ -87,16 +87,19 @@ int UpdateDAO::update(long long cardNum,string state)
 	
 	sprintf_s(updatesql, 256, "UPDATE credit_card SET state='%s' WHERE card_number=%lld;",p,cardNum);
 
-
-	if(mysql_query(mysql, updatesql)!=0)		//mysql_query()执行sql语句
+	if (mysql_query(mysql, updatesql) != 0)
 	{
-		sprintf_s(updatesql, 256, "UPDATE deposit_card SET state='%s' WHERE card_number=%lld;",p,cardNum);
-		if(mysql_query(mysql, updatesql)!=0)
-		{
-			MysqlConnector::close();
-			return 0;
-		}
+		MysqlConnector::close();
+		return 0;
 	}
+	
+	sprintf_s(updatesql, 256, "UPDATE deposit_card SET state='%s' WHERE card_number=%lld;",p,cardNum);
+	if(mysql_query(mysql, updatesql)!=0)
+	{
+		MysqlConnector::close();
+		return 0;
+	}
+
 
 	MysqlConnector::close();		//关闭连接
 	return 1;

@@ -6,4 +6,6 @@
 #include "WithdrawController.h"
 #include "ChangePasswordController.h"
 #include "TransController.h"
+#include "OpenController.h"
+#include "LossReportingController.h"
 #endif // !_INC_CONTROLLER_
